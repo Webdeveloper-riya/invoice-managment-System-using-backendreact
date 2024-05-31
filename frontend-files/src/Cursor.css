@@ -1,0 +1,50 @@
+/* Cursor.css */
+
+.cursor {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  /* Makes the cursor color-inverted */
+  animation: colorChange 5s infinite;
+  /* Adjust animation duration as needed */
+  transition: transform 0.2s ease-out;
+}
+
+.inner-circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid transparent;
+  mix-blend-mode: difference;
+  /* Makes the cursor color-inverted */
+  animation: colorChange 5s infinite reverse;
+  /* Adjust animation duration as needed */
+}
+
+@keyframes colorChange {
+  0% {
+    border-color: #ff0000;
+  }
+
+  25% {
+    border-color: #00ff00;
+  }
+
+  50% {
+    border-color: #0000ff;
+  }
+
+  75% {
+    border-color: #ffff00;
+  }
+
+  100% {
+    border-color: #ff00ff;
+  }
+}
